@@ -1,14 +1,29 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import Layout from '../layout'
 import Home from '../views/Home.vue'
+import Recommend from '../views/Recommend.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    component: Layout,
+    redirect:'/home',
+    children: [
+      {
+        path: 'home',
+        name: 'Home',
+        component: Home
+      },
+      {
+        path: 'recommend',
+        name: 'Hecommend',
+        component: Recommend
+      }
+
+    ]
   }
 ]
 
