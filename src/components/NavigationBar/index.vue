@@ -5,7 +5,6 @@
       <li class="nav_item"><router-link to="/recommend">安利</router-link></li>
       <li class="nav_item"><router-link to="/">相册</router-link></li>
       <li class="nav_item"><router-link to="/">留言板</router-link></li>
-      <li class="nav_item"><router-link to="/">安利</router-link></li>
       <li class="nav_item"><router-link to="/">记录</router-link></li>
       <li class="nav_item"><router-link to="/">维护</router-link></li>
       <li class="nav_item"><router-link to="/">联系</router-link></li>
@@ -19,7 +18,7 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 .nav{
   width: 100vw;
   height: 50px;
@@ -45,6 +44,11 @@ export default {
         }
       }
     }
+  }
+}
+@media screen and (max-width: 539px) {
+  .nav {
+    display: none;
   }
 }
 </style>

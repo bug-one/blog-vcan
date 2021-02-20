@@ -3,6 +3,7 @@
     <div class="mask">
     <CommonHeader/>
     <NavigationBar/>
+    <SideBar/>
     <router-view></router-view>
     </div>
   </div>
@@ -11,15 +12,17 @@
 <script>
 import CommonHeader from '../components/CommonHeader'
 import NavigationBar from '../components/NavigationBar'
+import SideBar from '../components/SideBar'
 export default {
   components:{
     CommonHeader,
-    NavigationBar
+    NavigationBar,
+    SideBar
   }
 }
 </script>
 
-<style lang="less">
+<style lang="less" scope>
 .home{
   width: 100vw;
   min-height: 100vh;
